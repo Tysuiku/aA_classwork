@@ -73,3 +73,4 @@ function value(num){
 };
 value(10);
 //false undefined, null, Nan, false, 0, -0
+console.log('hello');
