@@ -83,3 +83,183 @@ function averageOfFour(num1, num2, num3, num4){
 console.log(averageOfFour(10, 10, 15, 5)); 
 console.log(averageOfFour(3, 10, 11, 4)); 
 console.log(averageOfFour(1, 2, 3, 4));
+
+function sayHello(name) {
+  var msg = 'Hello, ' + name + '. How are you?';
+  return msg;
+}
+
+console.log(sayHello('bootcamp prep')); 
+function checkNumber(num) {
+  if (num > 0) {
+    return 'positive';
+  } else if (num < 0) {
+    return 'negative';
+  } else {
+    return 'zero';
+  }
+}
+
+console.log(checkNumber(5));
+
+function sayHello(name) {
+  var msg = 'Hello, ' + name + '. How are you?';
+  return msg;
+}
+
+console.log(sayHello('bootcamp prep')); 
+function checkNumber(num) {
+  if (num > 0) {
+    return 'positive';
+  } else if (num < 0) {
+    return 'negative';
+  } else {
+    return 'zero';
+  }
+}
+
+console.log(checkNumber(5));
+
+function sayHello(name) {
+  var msg = 'Hello, ' + name + '. How are you?';
+  return msg;
+}
+
+console.log(sayHello('bootcamp prep')); 
+function checkNumber(num) {
+  if (num > 0) {
+    return 'positive';
+  } else if (num < 0) {
+    return 'negative';
+  } else {
+    return 'zero';
+  }
+}
+
+console.log(checkNumber(5));
+
+function sayHello(name) {
+  var msg = 'Hello, ' + name + '. How are you?';
+  return msg;
+}
+
+console.log(sayHello('bootcamp prep')); 
+function checkNumber(num) {
+  if (num > 0) {
+    return 'positive';
+  } else if (num < 0) {
+    return 'negative';
+  } else {
+    return 'zero';
+  }
+}
+
+console.log(checkNumber(5));
+
+function sayHello(name) {
+  var msg = 'Hello, ' + name + '. How are you?';
+  return msg;
+}
+
+console.log(sayHello('bootcamp prep')); 
+function checkNumber(num) {
+  if (num > 0) {
+    return 'positive';
+  } else if (num < 0) {
+    return 'negative';
+  } else {
+    return 'zero';
+  }
+}
+
+console.log(checkNumber(5));
+
+function sayHello(name) {
+  var msg = 'Hello, ' + name + '. How are you?';
+  return msg;
+}
+
+console.log(sayHello('bootcamp prep')); 
+function checkNumber(num) {
+  if (num > 0) {
+    return 'positive';
+  } else if (num < 0) {
+    return 'negative';
+  } else {
+    return 'zero';
+  }
+}
+
+console.log(checkNumber(5));
+
+function sayHello(name) {
+  var msg = 'Hello, ' + name + '. How are you?';
+  return msg;
+}
+
+console.log(sayHello('bootcamp prep')); 
+function checkNumber(num) {
+  if (num > 0) {
+    return 'positive';
+  } else if (num < 0) {
+    return 'negative';
+  } else {
+    return 'zero';
+  }
+}
+
+console.log(checkNumber(5));
+
+function sayHello(name) {
+  var msg = 'Hello, ' + name + '. How are you?';
+  return msg;
+}
+
+console.log(sayHello('bootcamp prep')); 
+function checkNumber(num) {
+  if (num > 0) {
+    return 'positive';
+  } else if (num < 0) {
+    return 'negative';
+  } else {
+    return 'zero';
+  }
+}
+
+console.log(checkNumber(5));
+
+function sayHello(name) {
+  var msg = 'Hello, ' + name + '. How are you?';
+  return msg;
+}
+
+console.log(sayHello('bootcamp prep')); 
+function checkNumber(num) {
+  if (num > 0) {
+    return 'positive';
+  } else if (num < 0) {
+    return 'negative';
+  } else {
+    return 'zero';
+  }
+}
+
+console.log(checkNumber(5));
+
+function sayHello(name) {
+  var msg = 'Hello, ' + name + '. How are you?';
+  return msg;
+}
+
+console.log(sayHello('bootcamp prep')); 
+function checkNumber(num) {
+  if (num > 0) {
+    return 'positive';
+  } else if (num < 0) {
+    return 'negative';
+  } else {
+    return 'zero';
+  }
+}
+
+console.log(checkNumber(5));
