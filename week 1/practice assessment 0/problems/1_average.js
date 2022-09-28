@@ -9,7 +9,8 @@
 */
 
 function average(num1, num2) {
-  // your code here...
+  let avg = (num1 + num2) / 2;
+  return avg;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/

@@ -9,7 +9,7 @@
 */
 
 function oddRange(end) {
-  // your code here...
+
 }
 
 

@@ -9,7 +9,11 @@
 */
 
 function tripler(array) {
-  // your code here...
+  let tripleArray = [];
+  for (i = 0; i < array.length; i++){
+    tripleArray.push(array[i] * 3); 
+  }
+  return tripleArray;
 }
 
 
