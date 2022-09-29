@@ -64,9 +64,25 @@ everyOtherWord('the weather is wonderful'); // => [ 'the', 'is' ]
     return wordYell.join(' ');
 }; */
 
-function wordYeller(sentence){
-    
-}
+function wordYeller(sentence) {
+    let yelledWords = [];
+  
+    let words = sentence.split(" ");
+    let punctuation = ". , ! ? ; :".split(" "); 
+  
+    for (i = 0; i < words.length; i++) {
+      let word = words[i];
+      let lastCharacter = word.slice(-1);
+  
+      if (punctuation.indexOf(lastCharacter) !== -1) { 
+        yelledWords.push(word);
+      } else {                                        
+        yelledWords.push(word + "!");
+      }
+    }
+  
+    return yelledWords.join(" ");
+  }
 
 var sent = "Stop it now! Please, wont you stop?";
 var yelledWords = wordYeller(sent);
