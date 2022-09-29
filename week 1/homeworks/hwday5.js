@@ -90,3 +90,38 @@ console.log(yelledWords === "Stop! it! now! Please, wont! you! stop?"); // => tr
 
 var words = "Go to the store and grab the following: milk, bread, run, and cake";
 console.log(wordYeller(words) === "Go! to! the! store! and! grab! the! following: milk, bread, run, and! cake!"); // => true
+
+function arraySubstring(words, str){
+    let strArray = [];
+    for (i = 0; i < words.length; i++){
+        let word = words[i];
+        if (word.indexOf(str) !== -1){
+            strArray.push(true);
+        } else {
+            strArray.push(false);
+        }
+    }
+    return strArray;
+}
+console.log(arraySubstring(["hello", "history", "helix", "hellos"],"hel"));
+// => [true, false, true, true]
+console.log(arraySubstring(["prefix", "problems", "pragmatic", "prefer"], "pre"));
+// => [true, false, false, true]
+
+function evenCaps(sentence){
+        let newSentence = '';
+    for (i = 0; i < sentence.length; i++){
+        let char = sentence[i];
+    if (i % 2 === 0){
+        let capChar = char.toUpperCase();
+        newSentence += capChar;
+    } else {
+        newSentence += char;
+    }
+    }
+    return newSentence;
+}
+console.log(evenCaps("Tom got a small piece of pie"));
+// => "ToM GoT A SmAlL PiEcE Of pIe"
+console.log(evenCaps("the book is in front of the table"));
+// => "ThE BoOk iS In fRoNt oF ThE TaBlE"
