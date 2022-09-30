@@ -11,7 +11,7 @@ evenRange(8, 5) => []
 
 function evenRange(start, end) {
   let evenArray = [];
-  for (i = start; i < end; i++){
+  for (i = start; i <= end; i++){
     if (i % 2 === 0){
       evenArray.push(i)
     } else {
