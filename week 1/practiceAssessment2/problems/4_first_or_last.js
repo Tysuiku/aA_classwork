@@ -14,8 +14,15 @@ firstOrLast(['Jenny', 'Mary', 'Mark']) => 'Mark'
 *******************************************************************************/
 
 function firstOrLast(array) {
-  // your code here...
-}
+  for (i = 0; i < array.length; i++) {
+    let arraySize = array.length;
+    if (arraySize % 2 === 0){
+      return array[0];
+    } else {
+      return array.slice(-1);
+    }
+  }
+};
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
 module.exports = firstOrLast;
