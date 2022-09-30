@@ -9,7 +9,12 @@ reverseString("Jump,-jump-for-joy") => "joy-for-jump-Jump,"
 *******************************************************************************/
 
 function reverseString(string) {
-  // your code here...
+  let reversedString = '';
+  let newString = string.split('-');
+  for (i = newString.length - 1; i >= 0; i--){
+    reversedString += `${newString[i]}-`;
+  }
+  return reversedString.slice(0,-1);
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
