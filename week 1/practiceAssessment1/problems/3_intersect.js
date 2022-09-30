@@ -11,8 +11,14 @@ intersect(['a', 'b', 'c'], ['x', 'y', 'z']) => []
 *******************************************************************************/
 
 function intersect(arr1, arr2) {
-  // your code here...
+  let newArray = [];
+  for (i = 0; i < arr1.length; i++){
+  let Array = arr1[i];
+  if (arr2.indexOf(Array) > -1){
+      newArray.push(Array);
+  } 
+  }
+  return newArray;
 }
-
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
 module.exports = intersect;
