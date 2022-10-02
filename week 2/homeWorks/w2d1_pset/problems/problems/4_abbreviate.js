@@ -13,10 +13,34 @@ abbreviate('programming is fantastic'); // => 'prgrmmng is fntstc'
 abbreviate('hello world'); // => 'hll wrld'
 abbreviate('how are you'); // => 'how are you'
 ***********************************************************************/
-
-function abbreviate(sentence) {
-
-}
-
+function removeVowels(word) {
+    var vowels = ['a', 'e', 'i', 'o', 'u'];
+    var newWord = '';
+  
+    for (var i = 0; i < word.length; i += 1) {
+      var char = word[i];
+      if (vowels.indexOf(char) === -1) {
+        newWord += char;
+      }
+    }
+  
+    return newWord;
+  }
+  
+  function abbreviate(sentence) {
+    var words = sentence.split(' ');
+    var newWords = [];
+  
+    for (var i = 0; i < words.length; i += 1) {
+      var word = words[i];
+  
+      if (word.length >= 5) {
+        newWords.push(removeVowels(word));
+      } else {
+        newWords.push(word)
+      }
+    }
+    return newWords.join(' ');
+ };
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = abbreviate;
