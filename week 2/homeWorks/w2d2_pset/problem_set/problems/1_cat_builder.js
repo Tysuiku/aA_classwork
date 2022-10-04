@@ -13,10 +13,10 @@ cat2; // => { name: 'Nyan', color: 'rainbow', toys: [ 'poptarts' ] }
 
 function catBuilder(name, color, toys) {
 let cat = {
-name: name,
-color: color,
-toys: toys
-};
+name : name,
+color : color,
+toys : toys
+}
 return cat;
 }
 
