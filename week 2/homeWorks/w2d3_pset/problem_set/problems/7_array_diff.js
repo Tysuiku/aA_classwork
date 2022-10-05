@@ -16,8 +16,18 @@ Note: Assume both arrays have unique elements.
 
 
 function arrayDiff(arr1, arr2){
+    let arr = [];
   
-}
+    for(let i = 0; i < arr1.length; i++){
+      let ele = arr1[i];
+  
+      if(arr2.indexOf(ele) < 0) {
+        arr.push(ele);
+      }
+    }
+  
+    return arr;
+  }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = arrayDiff;

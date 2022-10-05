@@ -14,9 +14,19 @@ value in 'obj'.
 // valueCounter(pairs, 'Roman') // => 2
 ***********************************************************************/
 
-function valueCounter(obj, val){
+function valueCounter(object, value){
+    let counter = 0;
   
-}
+    for (var key in object) {
+      let val = object[key];
+  
+      if(val === value){
+        counter++
+      }
+    }
+    
+    return counter;
+  }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = valueCounter;

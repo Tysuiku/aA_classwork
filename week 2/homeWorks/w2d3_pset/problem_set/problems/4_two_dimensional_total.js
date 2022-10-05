@@ -19,8 +19,19 @@ twoDimensionalTotal(arr2); // => 15
 ***********************************************************************/
 
 function twoDimensionalTotal(array) {
+  var total = 0;
 
+  for (let i = 0; i < array.length; i ++) {
+    for (let j = 0; j < array[i].length; j ++) {
+      total += array[i][j];
+      console.log(array[i][j])
+    }
+  }
+
+  return total;
 }
+
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = twoDimensionalTotal;
