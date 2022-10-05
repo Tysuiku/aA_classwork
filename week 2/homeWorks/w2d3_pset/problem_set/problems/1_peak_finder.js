@@ -15,8 +15,20 @@ peakFinder([4, 6, 9, 4, 2, -7, 2, -4, 5]); //=> [2, 6, 8]
 ***********************************************************************/
 
 function peakFinder(array) {
-
+let peakNums = [];
+    for (i = 0; i < array.length; i++){
+        if (i === 0 && array[i] > array[i + 1]){
+            peakNums.push(i);
+        } else if (i === array.length - 1 && array[i] > array[i - 1] ){
+            peakNums.push(i);
+        } else if (array[i] > array[i - 1] && array[i] > array[i + 1]){
+            peakNums.push(i);
+        }
+    }
+    return peakNums;
 }
-
+console.log(peakFinder([1, 2, 3, 2, 1])); //=> [2]
+console.log(peakFinder([2, 1, 2, 3, 4, 5])); //=> [0, 5]
+console.log(peakFinder([4, 6, 9, 4, 2, -7, 2, -4, 5])); //=> [2, 6, 8]
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = peakFinder;
