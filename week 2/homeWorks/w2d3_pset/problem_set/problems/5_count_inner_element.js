@@ -32,7 +32,7 @@ function countInnerElement(arr) {
   
       for (let j = 0; j < subArr.length; j++){
         let ele = subArr[j];
-  
+        
         if(obj[ele] === undefined){
           obj[ele] = 1;
         } else {
@@ -43,6 +43,13 @@ function countInnerElement(arr) {
   
     return obj;
   }
+// Examples:
+var arr1 = [
+   [1,2,4,5],
+   [2,7,4],
+   [1,4,5,2,7]
+ ]
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = countInnerElement;

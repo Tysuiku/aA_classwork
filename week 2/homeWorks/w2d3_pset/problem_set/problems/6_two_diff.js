@@ -19,10 +19,8 @@ function twoDiff(array){
   
     for(let i = 0; i < array.length; i++){
       let num1 = array[i];
-  
       for(let j = i + 1; j < array.length; j++){
         let num2 = array[j];
-  
         if(num1 - num2 === 2 || num2 - num1 === 2){
           arr.push([i, j])
         }
@@ -31,6 +29,7 @@ function twoDiff(array){
   
     return arr
   }
+  
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = twoDiff;
