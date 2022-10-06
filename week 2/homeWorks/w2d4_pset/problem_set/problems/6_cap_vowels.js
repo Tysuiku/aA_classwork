@@ -13,8 +13,20 @@ capVowels('boOtCamP PreP'); // => 'bOOtcAmp prEp'
 ***********************************************************************/
 
 function capVowels(string) {
-
-}
-
+    let vowels = 'aeiouAEIOU'.split('');
+    let newStr= '';
+  
+    for (let i = 0; i < string.length; i += 1) {
+      var char = string[i];
+  
+      if (vowels.indexOf(char) > -1) {
+        newStr += char.toUpperCase();
+      } else {
+        newStr += char.toLowerCase();
+      }
+    }
+  
+    return newStr;
+  }
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = capVowels;

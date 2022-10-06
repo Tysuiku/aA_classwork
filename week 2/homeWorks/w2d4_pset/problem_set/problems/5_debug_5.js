@@ -9,14 +9,15 @@ function fizzBuzz(max) {
   var array = [];
 
   while(i < max) {
-    if (i % 5 || 3 === 0 && i !== 15) {
-      array.push(array[i]);
+    if ((i % 5 === 0 || i % 3 === 0) && i % 15 !== 0) {
+      array.push(i);
     }
     i += 1;
   }
 
   return array;
 }
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = fizzBuzz;
