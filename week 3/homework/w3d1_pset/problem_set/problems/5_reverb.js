@@ -9,10 +9,21 @@ reverb('wild'); // => 'wildild'
 reverb('debugged'); // => 'debuggeded'
 reverb('my'); // => 'my'
 ***********************************************************************/
+function reverb(word){
+    let vowels = 'aeiouAeiou';
+    for(let i = word.length - 1; i >= 0; i--){
+        let char = word[i];
 
-function reverb(word) {
+            if(vowels.indexOf(char) > -1){
+                return word + word.slice(i);
+            }
+    }
+    return word;
+};
 
-}
-
+/*console.log(reverb('running')); // => 'runninging'
+console.log(reverb('wild')); // => 'wildild'
+console.log(reverb('debugged')); // => 'debuggeded'
+console.log(reverb('my')); // => 'my' */ 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = reverb;
