@@ -17,8 +17,17 @@ power(11, 1); // => 11
 ***********************************************************************/
 
 function power(base, exp) {
-
-}
-
+    let product = 1;
+    for (i = 0; i < exp; i++){
+        product *= base;
+    }
+    return product;
+};
+//console.log(power(2, 5)); // => 32
+//console.log(power(2, 10)); // => 1024
+//console.log(power(9, 2)); // => 81
+//console.log(power(9, 3)); // => 729
+//console.log(power(11, 0)); // => 1
+//console.log(power(11, 1)); // => 11
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = power;

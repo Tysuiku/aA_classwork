@@ -11,8 +11,11 @@ threeInARow([10, 9, 20, 33, 3, 3]); // => false;
 
 function threeInARow(arr) {
     for(i = 0; i < arr.length; i++){
-        
+        if(arr[i] === arr[i + 1] && arr[i] + arr[i + 2]){
+            return true;
+        }
     }
+    return false;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

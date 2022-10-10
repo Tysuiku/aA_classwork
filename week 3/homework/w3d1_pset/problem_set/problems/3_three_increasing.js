@@ -14,8 +14,17 @@ threeIncreasing([7, 2, 4, 5, 2, 1, 6]); // => false
 ***********************************************************************/
 
 function threeIncreasing(arr) {
-
+    for(let i = 0; i < arr.length - 2; i++){
+            let num = arr[i];
+            let num1 = arr[i + 1];
+            let num2 = arr[i + 2];
+                if(num + 1 === num1 && num1 + 1 === num2){
+                    return true;
+                }
+    }
+    return false;
 }
-
+//console.log(threeIncreasing([3, 2, 11, 12, 13, 2, 4])); // => true
+//console.log(threeIncreasing([7, 2, 4, 5, 2, 1, 6])); // => false
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = threeIncreasing;
