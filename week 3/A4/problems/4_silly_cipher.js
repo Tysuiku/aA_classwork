@@ -15,11 +15,7 @@ function sillyCipher(words, cipher){
   let word = '';
   for(let i = 0; i < words.length; i++){
     let char = words[i];
-      if(cipher[char]){
-        word += cipher[char];
-     } else {
-      word += '.';
-     }
+    cipher[char] ? word += cipher[char]: word += '.'
 }
 return word;
 }
