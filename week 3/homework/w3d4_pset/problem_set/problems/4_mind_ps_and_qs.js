@@ -20,8 +20,26 @@ mindPsAndQs('PPPXQPPPQ'); // => 5
 
 
 function mindPsAndQs(str) {
-
-}
-
+    let longestStreak = 0;
+    let currentStreak = 0;
+  
+    for (let i = 0; i < str.length; i += 1) {
+      let char = str[i];
+      if (char === 'P' || char === 'Q') {
+        currentStreak ++ ;
+        if (currentStreak > longestStreak) {
+          longestStreak = currentStreak;
+        }
+      } else {
+        currentStreak = 0;
+      }
+    }
+  
+    return longestStreak;
+  }
+  //mindPsAndQs('BOOTCAMP'); // => 1
+  //mindPsAndQs('APCDQQPPC'); // => 4
+  //mindPsAndQs('PQPQ'); // => 4
+  //mindPsAndQs('PPPXQPPPQ'); // => 5
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = mindPsAndQs;

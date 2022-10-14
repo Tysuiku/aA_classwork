@@ -12,14 +12,17 @@ hasAllVowels('hello world'); // => false
 ***********************************************************************/
 
 function hasAllVowels(str) {
-    let vowel = 'aeiou';
-    for(let i = 0; str.length; i++){
-        
+    let vowel = ['a','e','i','o','u'];
+    for(let i = 0; i < vowel.length; i++){
+        if(str.indexOf(vowel[i]) === -1){
+            return false;
+        }
     }
+    return true;
 }
-hasAllVowels('have you gone biking?'); // => true
-hasAllVowels('get out of the way, silly'); // => true
-hasAllVowels('bootcamp prep'); // => false
-hasAllVowels('hello world'); // => false
+///console.log(hasAllVowels('have you gone biking?')); // => true
+///console.log(hasAllVowels('get out of the way, silly')); // => true
+///console.log(hasAllVowels('bootcamp prep')); // => false
+///console.log(hasAllVowels('hello world')); // => false
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = hasAllVowels;

@@ -20,7 +20,7 @@ function oddWordsOut(sentence) {
     }
     return evens.join(' ');
 }
-console.log(oddWordsOut('go to the store and buy milk')); // => 'go to milk'
-console.log(oddWordsOut('what is the answer')); // => 'what is answer'
+//console.log(oddWordsOut('go to the store and buy milk')); // => 'go to milk'
+//console.log(oddWordsOut('what is the answer')); // => 'what is answer'
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = oddWordsOut;

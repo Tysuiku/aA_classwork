@@ -12,8 +12,26 @@ commonFactors(45, 60); // => [ 1, 3, 5, 15 ]
 ***********************************************************************/
 
 function commonFactors(num1, num2) {
-
-}
-
+    if (num1 < num2) {
+        var max = num1;
+      } else {
+        var max = num2;
+      }
+    
+      var factors = [];
+    
+      for (var i = 1; i <= max; i += 1) {
+        if (num1 % i === 0 && num2 % i === 0) {
+          factors.push(i);
+        }
+      }
+    
+      return factors;
+    }
+    
+console.log(commonFactors(12, 50)); // => [ 1, 2 ]
+console.log(commonFactors(6, 24)); // => [ 1, 2, 3, 6 ]
+console.log(commonFactors(11, 22)); // => [ 1, 11 ]
+console.log(commonFactors(45, 60)); // => [ 1, 3, 5, 15 ]
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = commonFactors;
