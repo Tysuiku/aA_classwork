@@ -12,9 +12,56 @@ commonPrimeFactors(11,22); // => [ 11 ]
 commonPrimeFactors(45, 60); // => [ 3, 5 ]
 ***********************************************************************/
 
-function commonPrimeFactors(num1, num2) {
-
-}
-
+function isPrime(num) {
+    if (num < 2) {
+      return false;
+    }
+  
+    for (var i = 2; i < num; i++) {
+      if (num % i === 0) {
+        return false;
+      }
+    }
+  
+    return true;
+  }
+  
+  
+  function commonFactors(num1, num2) {
+    if (num1 < num2) {
+      var max = num1;
+    } else {
+      var max = num2;
+    }
+  
+    var factors = [];
+  
+    for (var i = 1; i <= max; i += 1) {
+      if (num1 % i === 0 && num2 % i === 0) {
+        factors.push(i);
+      }
+    }
+  
+    return factors;
+  }
+  
+  
+  function commonPrimeFactors(num1, num2) {
+    var factors = commonFactors(num1, num2);
+    var primeFactors = [];
+  
+    for (var i = 0; i < factors.length; i += 1) {
+      var factor = factors[i];
+      if (isPrime(factor)) {
+        primeFactors.push(factor);
+      }
+    }
+  
+    return primeFactors;
+  }
+  //console.log(commonPrimeFactors(12, 50)); // => [ 2 ]
+  //console.log(commonPrimeFactors(6, 24)); // => [ 2, 3 ]
+  //console.log(commonPrimeFactors(11,22)); // => [ 11 ]
+  //console.log(commonPrimeFactors(45, 60)); // => [ 3, 5 ]
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = commonPrimeFactors;
