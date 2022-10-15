@@ -31,3 +31,12 @@ for(let student of class1){
 //for( let i of list){
 //    console.log(i)
 //}
+function initials(student){
+    let names = student.split(' ');
+    let initial = '';
+    for(let i = 0; i < student.length; i++){
+      let name = student[i]
+      initials += name[0];
+    }
+    return initial;
+  }
