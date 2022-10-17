@@ -26,8 +26,32 @@ isPassing(assessments2) => false
 *******************************************************************************/
 
 function isPassing(assessments) {
-  // your code here...
+  let total = 0;
+  for(let i = 0; i < assessments.length; i++){
+    let assessment = assessments[i];
+    total += assessment['score']
+  }
+  let avg = total / assessments.length;
+  return avg >= 70;
 }
 
+var assessments1 = [
+  {number: 1, score: 60},
+  {number: 2, score: 90},
+  {number: 3, score: 80},
+  {number: 4, score: 100},
+  {number: 5, score: 85}
+];
+
+console.log(isPassing(assessments1)); //=> true
+
+
+var assessments2 = [
+  {number: 1, score: 60},
+  {number: 2, score: 20},
+  {number: 3, score: 45}
+];
+
+console.log(isPassing(assessments2)); //=> false
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
 module.exports = isPassing;
