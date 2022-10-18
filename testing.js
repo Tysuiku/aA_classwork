@@ -1,3 +1,8 @@
-
-console.log(pyramidSum([1, 4, 6])); // [[15], [5, 10], [1, 4, 6]]
-console.log(pyramidSum([3, 7, 2, 11])); // [[41], [19, 22], [10, 9, 13], [3, 7, 2, 11]]
+function myAvg(array){
+    let avg = 0;
+    for(let i = 0; i < array.length; i++){
+      avg += array[i]['score']  
+    }
+    return avg / array.length;
+  }
+  console.log(myAvg([{"id": 0, "score": 65}, {"id": 1, "score": 75}, {"id": 2, "score": 85}]))
