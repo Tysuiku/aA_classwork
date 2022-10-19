@@ -11,35 +11,34 @@ reverseHipsterfy("towel flicker banana"); // => 'twel flcker bnna'
 reverseHipsterfy("runner anaconda"); // => 'rnner ncnda'
 reverseHipsterfy("turtle cheeseburger fries"); // => 'trtle chsbrger fres'
 ***********************************************************************/
-function lastVowel(word){
+function lastVowelIdx(word){
     let vowels = 'aeiou';
-    for(let i = 0; i < word.length; i++){
+    for(let i = word.length - 1; i >= 0; i--){
         let char = word[i];
         if(vowels.indexOf(char) > -1){
             return i;
         }
     }
 }
-
-function rvsHipstery(word){
+//console.log(lastVowelIdx('proper'))
+function reverseHipWord(word){
     let vowels = 'aeiou';
-    let lastVowelIdx = lastVowel(word);
     let newWord = '';
-    for(let i = 0; i < word.length; i++){
+    for(i = 0; i < word.length; i++){
         let char = word[i];
-        if(vowels.indexOf(char) > -1 || i === lastVowelIdx){
+        if(vowels.indexOf(char) === -1 || lastVowelIdx(word) === i){
             newWord += char;
         }
     }
     return newWord;
 }
-
+//console.log(reverseHipWord('proper'))
 function reverseHipsterfy(sentence) {
     let words = sentence.split(' ');
     let newWords = [];
-    for(let i = 0; i < sentence.length; i++){
-        let word = sentence[i];
-        newWords.push(rvsHipstery(word));
+    for(let i = 0; i < words.length; i++){
+        let word = words[i];
+        newWords.push(reverseHipWord(word));
     }
     return newWords.join(' ');
 }
