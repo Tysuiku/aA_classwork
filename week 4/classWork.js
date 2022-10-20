@@ -21,8 +21,27 @@
 //tree 
 //graph 
 
-const fib = n => {
+/* const fib = n => {
   if(n === 1 || n === 2) return 1;
   return fib(n - 1) + fib(n - 2);
 };
 console.log(fib(5));
+console.log(fib(10));
+console.log(fib(9)); */
+
+/*function factorial(num){
+    if (num <= 1){
+        return 1;
+    }
+    return num * factorial(num - 1);
+}
+console.log(factorial(4)); */
+
+function power(base, exponent) {
+    if(exponent === 0){
+        return 1;
+    }
+    return base * power(base, exponent - 1);
+};
+
+console.log(power(2, 3));
