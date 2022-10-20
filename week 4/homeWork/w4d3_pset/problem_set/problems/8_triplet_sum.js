@@ -14,8 +14,21 @@ tripletSum(arr1, 11); // => [ [ 5, 2, 4 ] ]
 ***********************************************************************/
 
 function tripletSum(array, sum) {
-
+    let arr = [];
+    for(let i = 0; i < array.length; i++){
+        for(let j = i + 1; j < array.length; j++){
+            for(let k = j + 1; k < array.length; k++){
+                if(array[i] + array[j] + array[k] === sum){
+                    arr.push([array[i],array[j],array[k]]);
+                }
+            }
+        }
+    }
+    return arr;
 }
-
+var arr1 = [1, 3, 5, 2, 4];
+console.log(tripletSum(arr1, 8)); // => [ [ 1, 3, 4 ], [ 1, 5, 2 ] ]
+console.log(tripletSum(arr1, 10)); // => [ [ 1, 5, 4 ], [ 3, 5, 2 ] ]
+console.log(tripletSum(arr1, 11)); // => [ [ 5, 2, 4 ] ]
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = tripletSum;

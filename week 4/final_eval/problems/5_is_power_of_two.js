@@ -16,22 +16,19 @@ Difficulty: Medium
 *************************************************************************************/
 
 function isPowerOfTwo(num) {
-    if(num = 0){
-        return false;
-    } else if (num = 1){
-        return true;
+    if(num === 1){
+       return true;
     }
-    let power = 1;
-    while(power < num){
-        power *= 2
-        i++
+    let n = 2;
+    while(n < num){
+        n *= 2
+        if(n === num){
+            return true;
     }
-    if(power === num){
-        return true;
-    } else {
-        
     }
+    return false;
 }
+    
 console.log(isPowerOfTwo(1));  // => true
 console.log(isPowerOfTwo(32)); // => true
 console.log(isPowerOfTwo(12)); // => false

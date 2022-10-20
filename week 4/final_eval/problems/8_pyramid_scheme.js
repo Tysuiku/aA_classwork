@@ -42,11 +42,47 @@ Hint:
 
 Difficulty: Hard
 *************************************************************************************/
-
-function pyramidScheme(base) {
-
+function pyramid(arr){
+  let newArr = []
+  if(arr.length === 1){
+    return arr;
+  }
+  for(let i = 0; i < arr.length - 1; i++){
+    newArr.push(arr[i]+arr[i + 1]);
+  }
+  return newArr;
 }
 
+function pyramidScheme(base) {
+  let result = [base];
+  for(let i = result.length - 1; i < result.length; i++){
+    if(result[0].length === 1){
+      return result;
+    }
+    result.unshift(pyramid(result[0]));
+  }
+  return result;
+}
+var p1 = pyramidScheme([2, 3, 7, 5, 9]);
+console.log(p1) // =>
+/* [
+   [ 85 ],
+   [ 37, 48 ],
+   [ 15, 22, 26 ],
+   [ 5, 10, 12, 14 ],
+   [ 2, 3, 7, 5, 9 ]
+ ]
+*/
+var p2 = pyramidScheme([2, 2, 2, 2]);
+console.log(p2) // =>
+/* 
+[
+   [ 16 ],
+   [ 8, 8 ],
+   [ 4, 4, 4 ],
+   [ 2, 2, 2, 2 ]
+ ]
+*/
 /******************** DO NOT MODIFY ANYTHING UNDER THIS LINE *************************/
 
 module.exports = pyramidScheme;
